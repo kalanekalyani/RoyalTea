@@ -1,0 +1,170 @@
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+
+      /* Royal tea background */
+      background: linear-gradient(rgba(45,25,10,0.85), rgba(45,25,10,0.85)),
+        url("https://images.unsplash.com/photo-1544785349-c4a5301826fd")
+        center/cover no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f5efe6;
+      padding: 20px;
+    }
+
+    .card {
+      background: #3b2416;
+      max-width: 850px;
+      width: 100%;
+      padding: 50px 35px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    }
+
+    /* Logo */
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      color: #d4af37;
+      letter-spacing: 2px;
+    }
+
+    /* Launching */
+    .launching {
+      margin: 10px 0 25px;
+      color: #d4af37;
+      letter-spacing: 3px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    /* Tagline */
+    .tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    /* Description */
+    .description {
+      color: #e8dcc8;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+      margin-bottom: 35px;
+    }
+
+    /* Email box */
+    .email-box {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .email-box input {
+      padding: 14px;
+      width: 260px;
+      border-radius: 6px;
+      border: none;
+      outline: none;
+    }
+
+    .email-box button {
+      padding: 14px 25px;
+      background: #d4af37;
+      color: #3b2416;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .email-box button:hover {
+      background: #f1c84b;
+    }
+
+    /* Social icons */
+    .social-icons {
+      margin-top: 30px;
+    }
+
+    .social-icons i {
+      margin: 0 12px;
+      font-size: 20px;
+      color: #d4af37;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .social-icons i:hover {
+      color: white;
+      transform: scale(1.1);
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #cbb89d;
+    }
+
+    /* Mobile */
+    @media(max-width:600px){
+      .tagline{
+        font-size:22px;
+      }
+
+      .email-box{
+        flex-direction: column;
+      }
+
+      .email-box input,
+      .email-box button{
+        width:100%;
+      }
+    }
+    /* Countdown */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.countdown div {
+  background: #2b1b12;
+  padding: 15px;
+  border-radius: 10px;
+  width: 80px;
+  text-align: center;
+}
+
+.countdown span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d4af37;
+  display: block;
+}
+
+.countdown p {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #e8dcc8;
+}
+
+/* mobile */
+@media(max-width:600px){
+  .countdown{
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Chai | Coming Soon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+   <link rel="stylesheet"href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="card">
+
+    <h1 class="logo">ROYAL CHAI</h1>
+    <div class="launching">Launching Soon</div>
+
+    <h2 class="tagline">Brew the Royal Tradition</h2>
+
+    <p class="description">
+      Premium instant chai tea premix inspired by royal Indian households.
+      Experience rich aroma, authentic taste, and timeless warmth in every cup.
+    </p>
+
+    <!-- Countdown Timer -->
+    <div class="countdown">
+     <div><span id="days">00</span><p>Days</p></div>
+     <div><span id="hours">00</span><p>Hours</p></div>
+     <div><span id="minutes">00</span><p>Min</p></div>
+     <div><span id="seconds">00</span><p>Sec</p></div>
+    </div>
+
+
+    <!-- Email Signup -->
+    <div class="email-box">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button onclick="subscribe()">Notify Me</button>
+    </div>
+
+    <!-- Social -->
+    <div class="social-icons">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+
+    <footer>
+      © 2026 Royal Chai. All rights reserved.
+    </footer>
+
+  </div>
+
+  <script>
+  // 🎯 Set launch date here
+  const launchDate = new Date("March 1, 2026 00:00:00").getTime();
+
+  const timer = setInterval(function () {
+    const now = new Date().getTime();
+    const diff = launchDate - now;
+
+    const days = Math.floor(diff / (10000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+
+    if (diff < 0) {
+      clearInterval(timer);
+    }
+  }, 1000);
+
+  // Email function
+  function subscribe() {
+    const email = document.getElementById("email").value;
+
+    if (email) {
+      alert("Thanks! We'll notify you when we launch ☕");
+      document.getElementById("email").value = "";
+    }
+  }
+</script>
+
+
+</body>
+</html>
